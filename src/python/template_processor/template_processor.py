@@ -17,13 +17,18 @@ class TemplateProcessor(object):
         self.template_env = Environment(loader=FileSystemLoader(configuration.templates_path))
 
     def prepare_html_sample_data(self, data):
-        self.logger.info('Application prepares html data')
+        self.logger.info('Application prepares sample html data')
         template = self.template_env.get_template('report-sample.html')
         template_vars = {
             "title": "Sales Funnel Report - National",
             "national_pivot_table": data.to_html()
         }
         return template.render(template_vars)
+
+    def prepare_html_custom_data(self, data_dictionary):
+        self.logger.info('Application prepares custom html data')
+        template = self.template_env.get_template('custom-report.html')
+        return template.render(data_dictionary)
 
 
 template_processor = TemplateProcessor()

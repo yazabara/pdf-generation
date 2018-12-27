@@ -22,3 +22,10 @@ class List(DocComponent):
         )
         self.logger.info('Item {} added to list {}'.format(self.id, item))
         return self
+
+    def convert_to_html(self):
+        template = self.template_env.get_template('list.html')
+        template_vars = {
+            "data": self.data
+        }
+        return template.render(template_vars)

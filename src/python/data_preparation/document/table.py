@@ -19,6 +19,14 @@ class Table(DocComponent):
     def component_type(self):
         return 'Table'
 
+    def convert_to_html(self):
+        template = self.template_env.get_template('table.html')
+        template_vars = {
+            "headers": list(self.data.columns.values),
+            "data": self.data.values.tolist()
+        }
+        return template.render(template_vars)
+
     def add_row(self, row):
         """
         Method adds row to existing table
