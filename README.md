@@ -15,9 +15,9 @@ PdfGenerator.generate(doc)
 ```
 
 For now there are 3 base components:
-- Table: html <table
-- List: html ul
-- Custom: any html code
+- Table: ```html <table>```
+- List: ```html <ul>```
+- Custom: ```any html code```
 
 There is possibility to customize pdf reports using css (weasyprint).
 
