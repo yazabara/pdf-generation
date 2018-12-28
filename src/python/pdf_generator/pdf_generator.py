@@ -34,7 +34,7 @@ class PdfGenerator(object):
 
     def generate_custom_report(self):
         result_path = configuration.reports_path + 'report-custom.pdf'
-        doc = Document(None)
+        document = Document(None)
         list_data = List() \
             .add_item('First li element') \
             .add_item('Second li element') \
@@ -49,12 +49,17 @@ class PdfGenerator(object):
             .add_row({'First': 2, 'Second': 'new'}) \
             .add_row({'First': 3, 'Second': 'new value'})
 
-        doc.add_component('custom_list', list_data)
-        doc.add_component('custom_table', table_data)
-        doc.add_component('custom_component', '<a href="https://github.com/yazabara">yazabara repo</a>')
+        document \
+            .add_component('custom_list', list_data) \
+            .add_component('custom_table', table_data) \
+            .add_component('custom_component', '<a href="https://github.com/yazabara">yazabara repo</a>') \
+            .add_component('custom_component_with_attrs',
+                           '<a data-doc-link="ultra-link-1" '
+                           'data-link="ultra-link" '
+                           'href="http://127.0.0.1:8000/links/ultra-link-1">test from author</a>')
 
         HTML(
-            string=template_processor.prepare_html_custom_data(doc.prepare_html_dic())
+            string=template_processor.prepare_html_custom_data(document.prepare_html_dic())
         ).write_pdf(
             target=result_path,
             stylesheets=[configuration.templates_path + 'custom-report.css']

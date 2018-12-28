@@ -3,7 +3,7 @@ import unittest
 from data_preparation.document.list import List
 
 
-class TableTest(unittest.TestCase):
+class ListTest(unittest.TestCase):
 
     def test_table_not_none(self):
         array = List()
