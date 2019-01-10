@@ -20,7 +20,7 @@ class List(DocComponent):
             to_append=pd.Series([item]),
             ignore_index=True
         )
-        self.logger.info('Item {} added to list {}'.format(self.id, item))
+        self.logger.info('Item {} added to list {}'.format(item, self.id))
         return self
 
     def convert_to_html(self):

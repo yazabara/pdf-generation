@@ -14,7 +14,7 @@ class Table(DocComponent):
         self.data = pd.DataFrame(
             columns=headers
         )
-        self.logger.info('Table {} has headers: {}'.format(self.id, headers))
+        self.logger.info('Table {} created with headers: {}'.format(self.id, headers))
 
     def component_type(self):
         return 'Table'

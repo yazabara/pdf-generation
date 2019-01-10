@@ -34,7 +34,7 @@ class DocumentTest(unittest.TestCase):
                            .add_row({'First': 3, 'Second': 'new value'})
                            ) \
             .add_component('custom', '<a href="https://github.com/yazabara">yazabara repo</a>') \
-            .prepare_html_dic()
+            .prepare_html_dict()
 
         self.assertIsNotNone(html_dic)
         self.assertEqual(3, len(html_dic))

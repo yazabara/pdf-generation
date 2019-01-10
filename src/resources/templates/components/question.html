@@ -1,0 +1,19 @@
+<h3 class="question-header"> {{question_title}} </h3>
+
+{% if sub_questions is not none %}
+
+    {% for sub_question in sub_questions %}
+    <h4 class="sub-question-header">{{sub_question.title}}</h4>
+
+    <div class="sub-question-content">
+        {{sub_question.content}}
+    </div>
+    {% endfor %}
+
+{% else %}
+
+    <div class="question-content">
+        {{question_content}}
+    </div>
+
+{% endif %}

@@ -19,6 +19,9 @@ For now there are 3 base components:
 - List: ```html <ul>```
 - Custom: ```any html code```
 
+And one custom component:
+- Question block (custom html code)
+
 There is possibility to customize pdf reports using css (weasyprint).
 
 ## Installing
@@ -28,5 +31,6 @@ https://weasyprint.readthedocs.io/en/stable/install.html#step-2-update-pip-and-s
 
 ## Useful links
 Example : http://pbpython.com/pdf-reports.html
+
 Jinja2 template engine: http://jinja.pocoo.org/docs/2.10/templates/
 

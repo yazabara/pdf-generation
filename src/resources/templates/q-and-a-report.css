@@ -1,0 +1,27 @@
+.history-container table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.history-container table, th, td {
+    border: 1px solid black;
+}
+
+.history-container table.history-container-tip {
+    background-color: darkgray;
+    font-size: 12px;
+    border-top: none !important;
+}
+
+.history-container table.history-container-tip td {
+    border-top: none !important;
+}
+
+.history-container th {
+    white-space: nowrap;
+    padding: 5px;
+}
+
+.questions-container .question-content, .sub-question-content {
+    margin-left: 50px;
+}
