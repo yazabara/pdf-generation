@@ -22,10 +22,9 @@ class HtmlBuilder(metaclass=ABCMeta):
         :return: html rendered data
         """
         self.logger.info('Builder {} prepares html data for {} file'.format(self.id, self.html_template_file()))
-        template = self.template_env.get_template(self.html_template_file())
-        html = template.render(self.build_document().prepare_html_dict())
-        print(html)
-        return html
+        return self \
+            .template_env.get_template(self.html_template_file()) \
+            .render(self.build_document().prepare_html_dict())
 
     @abstractmethod
     def build_document(self):

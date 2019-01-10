@@ -1,4 +1,5 @@
 *.iml
 /.idea/*
 /venv/*
+/src/resources/reports/*
 application.log
