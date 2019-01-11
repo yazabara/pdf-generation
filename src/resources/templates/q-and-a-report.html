@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% if title %}
-    <title>{{ title }}</title>
-    {% endif %}
-    <style>
-        @page {
-            @top-right {
-                content: "{{top_right}}";
-            }
-        }
-    </style>
-</head>
+{% include "blocks/page-head/page-head.html" %}
 <body>
+
+{% include "blocks/page-header/page-header.html" %}
 
 {% if history %}
 <div class="history-container">

@@ -12,14 +12,14 @@ class PdfBuilder(metaclass=ABCMeta):
     def __init__(self) -> None:
         super().__init__()
         self.id = uuid.uuid4()
-        self.logger = logging.getLogger('Pdf Builder')
-        self.logger.debug('Pdf Builder {} was initialized'.format(self.id))
+        self.logger = logging.getLogger('PDF Builder')
+        self.logger.debug('PDF Builder {} was initialized'.format(self.id))
 
     def build_pdf(self):
         """
         Method generates PDF using html builder
         """
-        self.logger.info('Pdf Builder {} starts to generate report for {}'.format(self.id, self._pdf_report_file()))
+        self.logger.info('PDF Builder {} starts to generate report for {}'.format(self.id, self._pdf_report_file()))
         html_builder = self._get_html_builder()
         result_path = configuration.reports_path + self._pdf_report_file()
         HTML(

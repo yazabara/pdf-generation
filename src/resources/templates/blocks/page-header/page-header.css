@@ -1,0 +1,27 @@
+.page-header h2 {
+    line-height: 5px;
+}
+
+.page-header h3 {
+    color: darkgrey;
+    line-height: 5px;
+}
+
+.page-header .page-header-block {
+    width: 50%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.page-header .page-header-right {
+    float: right;
+}
+
+.page-header .page-header-right img {
+    width: 100%;
+    height: 100%;
+}
+
+.page-header .page-header-left {
+    float: left;
+}

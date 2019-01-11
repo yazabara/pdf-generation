@@ -1,0 +1,14 @@
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>{{ title }}</title>
+    {% endif %}
+    <style>
+        @page {
+            @top-right {
+                font-style: italic;
+                content: "{{top_right}}";
+            }
+        }
+    </style>
+</head>
