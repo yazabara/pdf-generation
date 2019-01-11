@@ -1,5 +1,3 @@
-import uuid
-
 from data_preparation.document.document import Document
 from data_preparation.html_builder import HtmlBuilder
 
@@ -8,7 +6,6 @@ class QAndAHtmlBuilder(HtmlBuilder):
 
     def __init__(self) -> None:
         super().__init__()
-        self.id = uuid.uuid4()
         self.history = None
         self.questions = []
 
