@@ -5,6 +5,13 @@
     {% if title %}
     <title>{{ title }}</title>
     {% endif %}
+    <style>
+        @page {
+            @top-right {
+                content: "{{top_right}}";
+            }
+        }
+    </style>
 </head>
 <body>
 

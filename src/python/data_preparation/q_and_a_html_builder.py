@@ -15,6 +15,7 @@ class QAndAHtmlBuilder(HtmlBuilder):
     def build_document(self):
         document = Document('Report #' + str(self.id))
         document \
+            .add_component('top_right', 'Report #1') \
             .add_component('question_list', self.questions) \
             .add_component('history', self.history)
         return document
