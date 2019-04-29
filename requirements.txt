@@ -1,3 +1,5 @@
+PyPDF2
+comtypes
 pandas
 numpy
 xlrd
