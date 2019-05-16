@@ -14,6 +14,15 @@ class DocToPdf(FileConverter):
         word = comtypes.client.CreateObject('Word.Application')
         doc = word.Documents.Open(in_file)
         doc.SaveAs(out_file, FileFormat=DocToPdf.WD_FORMAT_PDF)
+
+        doc.ExportAsFixedFormat(
+            OutputFileName=out_file,
+            ExportFormat=DocToPdf.WD_FORMAT_PDF,
+            OpenAfterExport=False,
+            OptimizeFor=0,
+            CreateBookmarks=1,
+            DocStructureTags=True
+        )
         doc.Close()
         word.Quit()
 
