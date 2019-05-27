@@ -5,3 +5,4 @@ numpy
 xlrd
 jinja2
 weasyprint
+XlsxWriter

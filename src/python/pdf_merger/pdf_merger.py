@@ -11,7 +11,7 @@ class PdfMerger(object):
 
     def merge(self, files: List[str], result_name: str):
         for pdf in files:
-            self.merger.append(pdf)
+            self.merger.append(pdf, bookmark="File {} ".format(pdf))
         self.merger.write(result_name)
 
 
